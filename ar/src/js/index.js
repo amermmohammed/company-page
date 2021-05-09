@@ -15,6 +15,17 @@ $(function() {
         }
     );
 
+    var pathname = window.location.pathname;
+    console.log(pathname);
+    $('.navbar-nav > li > a[href="' + pathname + '"]').parent().addClass('active');
+
+    if (pathname == "/blog-details.html" || pathname == "/add-blog.html") {
+        $('.navbar-nav > li > a[href="/blog.html"]').parent().addClass('active');
+    }
+
+    if (pathname == "/project-details.html") {
+        $('.navbar-nav > li > a[href="/projects.html"]').parent().addClass('active');
+    }
     // Project-deatils gallery
 
     let modalId = $('#image-gallery');
